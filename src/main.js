@@ -1,10 +1,8 @@
 import App from './App.svelte';
 
-const app = new App({
-	target: document.body,
-	props: {
-		name: 'world'
-	}
-});
+const version = '1.0.0';
+const date = '27.10.2020';
 
-export default app;
+console.debug('RoadMapApp v' + version + ' (' + date + ')');
+
+window.RoadMapApp = App;

@@ -1,12 +1,14 @@
 {
     "data": {
         "header": [{
+            "headerName": "ДОРОЖНАЯ КАРТА",
             "initDate": "22.10.2020",
             "productName": "Новый продукт (НЕ ТРОГАТЬ)",
             "duration": 2
         }],
         "product": [{
             "blockId": "1",
+            "headerName": "БЛОК РАЗВИТИЯ",
             "category": "Продукт",
             "state": "Реализация проекта",
             "duration": 0,
@@ -22,6 +24,7 @@
         }],
         "analysisKB": [{
             "blockId": "2",
+            "headerName": "КОММЕРЧЕСКИЙ БЛОК",
             "category": "Анализ рынка КБ",
             "state": "Подведение итогов согласования",
             "highlight": "1",
@@ -37,6 +40,7 @@
         }],
         "analysisTRIS": [{
             "blockId": "3",
+            "headerName": "БЛОК ТРиС",
             "category": "Анализ ТРиС",
             "state": "Завершена",
             "duration": 0,
@@ -59,7 +63,8 @@
         }],
         "acceptInit": [{
             "blockId": "4",
-            "category": "РЕШЕНЕИЕ АДМИНИСТРАЦИИ - УТВЕРЖДЕНИЕ ИНИЦИАТИВЫ",
+            "headerName": "РЕШЕНЕИЕ АДМИНИСТРАЦИИ - УТВЕРЖДЕНИЕ ИНИЦИАТИВЫ",
+            "category": "",
             "state": "Инициатива утверждена",
             "acceptEnd": "22.10.2020",
             "taskLink": "\/MainTaskForm.aspx?TaskID=377316",
@@ -73,7 +78,8 @@
         }],
         "projectPassport": [{
             "blockId": "5",
-            "category": "ПАСПОРТ ПРОЕКТА",
+            "headerName": "ПАСПОРТ ПРОЕКТА",
+            "category": "",
             "taskLink": "\/MainTaskForm.aspx?TaskID=377315",
             "highlight": "0",
             "state": "Реализация проекта",
@@ -101,7 +107,8 @@
         }],
         "acceptProject": [{
             "blockId": "6",
-            "category": "РЕШЕНЕИЕ АДМИНИСТРАЦИИ - УТВЕРЖДЕНИЕ ПАСПОРТА ПРОЕКТА",
+            "headerName": "РЕШЕНЕИЕ АДМИНИСТРАЦИИ - УТВЕРЖДЕНИЕ ПАСПОРТА ПРОЕКТА",
+            "category": "",
             "state": "Паспорт утвержден",
             "acceptEnd": "22.10.2020",
             "taskLink": "\/MainTaskForm.aspx?TaskID=377364",
@@ -115,7 +122,8 @@
         }],
         "stages": [{
                 "blockId": "7",
-                "category": "ЭТАП: Разработка продукции",
+                "headerName": "ЭТАП: Разработка продукции",
+                "category": "Продукт",
                 "taskLink": "\/MainTaskForm.aspx?TaskID=377319",
                 "highlight": "1",
                 "orderedTime": "31.03.2021",
@@ -142,7 +150,8 @@
             },
             {
                 "blockId": "7",
-                "category": "ЭТАП: Постановка на производство",
+                "headerName": "ЭТАП: Постановка на производство",
+                "category": "Анализ рынка КБ",
                 "taskLink": "\/MainTaskForm.aspx?TaskID=377320",
                 "highlight": "1",
                 "orderedTime": "30.04.2021",
@@ -169,7 +178,8 @@
             },
             {
                 "blockId": "7",
-                "category": "ЭТАП: Сертификация",
+                "headerName": "ЭТАП: Сертификация",
+                "category": "Анализ ТРиС",
                 "taskLink": "\/MainTaskForm.aspx?TaskID=377321",
                 "highlight": "0",
                 "orderedTime": "01.06.2021",
