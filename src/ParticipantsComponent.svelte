@@ -14,7 +14,7 @@
 
         setTimeout(() => {
             let modal = document.querySelectorAll('[data-shown="1"]')[0] 
-            var span = modal.childNodes[0].childNodes[0];
+            var span = modal.childNodes[0];
 
             modal.style.display = "block";
         

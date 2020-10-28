@@ -4,7 +4,7 @@
             "headerName": "ДОРОЖНАЯ КАРТА",
             "initDate": "22.10.2020",
             "productName": "Новый продукт (НЕ ТРОГАТЬ)",
-            "duration": 2
+            "duration": 3
         }],
         "product": [{
             "blockId": "1",
@@ -17,10 +17,10 @@
                 "fullName": "Власова Ирина Николаевна",
                 "position": "Бизнес-аналитик",
                 "department": "Техническая поддержка",
-                "photoLink": "\/UserInfo.aspx?UserID=2199"
+                "userId": "2199"
             }],
-            "taskLink": "\/MainTaskForm.aspx?TaskID=377312",
-            "canEdit": "1"
+            "taskId": "377312",
+            "accepted": "1"
         }],
         "analysisKB": [{
             "blockId": "2",
@@ -28,15 +28,15 @@
             "category": "Анализ рынка КБ",
             "state": "Подведение итогов согласования",
             "highlight": "1",
-            "duration": 4,
+            "duration": 6,
             "participants": [{
                 "fullName": "Михайловская Юлия Вадимовна",
                 "position": "Бизнес-аналитик",
                 "department": "Техническая поддержка",
-                "photoLink": "\/UserInfo.aspx?UserID=2670"
+                "userId": "2670"
             }],
-            "taskLink": "\/MainTaskForm.aspx?TaskID=377313",
-            "canEdit": "0"
+            "taskId": "377313",
+            "accepted": "0"
         }],
         "analysisTRIS": [{
             "blockId": "3",
@@ -49,17 +49,17 @@
                     "fullName": "Власова Ирина Николаевна",
                     "position": "Бизнес-аналитик",
                     "department": "Техническая поддержка",
-                    "photoLink": "\/UserInfo.aspx?UserID=2199"
+                    "userId": "2199"
                 },
                 {
                     "fullName": "Литвин Василий",
                     "position": "Руководитель проекта",
                     "department": "Техническая поддержка",
-                    "photoLink": "\/UserInfo.aspx?UserID=2201"
+                    "userId": "2201"
                 }
             ],
-            "taskLink": "\/MainTaskForm.aspx?TaskID=377314",
-            "canEdit": "0"
+            "taskId": "377314",
+            "accepted": "0"
         }],
         "acceptInit": [{
             "blockId": "4",
@@ -67,32 +67,32 @@
             "category": "",
             "state": "Инициатива утверждена",
             "acceptEnd": "22.10.2020",
-            "taskLink": "\/MainTaskForm.aspx?TaskID=377316",
+            "taskId": "377316",
             "participants": [{
                 "fullName": "Власова Ирина Николаевна",
                 "position": "Бизнес-аналитик",
                 "department": "Техническая поддержка",
-                "photoLink": "\/UserInfo.aspx?UserID=2199"
+                "userId": "2199"
             }],
-            "canEdit": "1"
+            "accepted": "1"
         }],
         "projectPassport": [{
             "blockId": "5",
             "headerName": "ПАСПОРТ ПРОЕКТА",
             "category": "",
-            "taskLink": "\/MainTaskForm.aspx?TaskID=377315",
+            "taskId": "377315",
             "highlight": "0",
             "state": "Реализация проекта",
             "startDate": "26.10.2020",
             "endDate": "31.03.2021",
             "plannedOrderedTime": "31.03.2021",
             "projectManager": "Власова Ирина",
-            "canEdit": "0",
+            "accepted": "0",
             "participants": [{
                 "fullName": "Власова Ирина Николаевна",
                 "position": "Бизнес-аналитик",
                 "department": "Техническая поддержка",
-                "photoLink": "\/UserInfo.aspx?UserID=2199"
+                "userId": "2199"
             }],
             "riskState": "red",
             "green": "0\/8",
@@ -103,7 +103,9 @@
             "greenLink": "\/SinglePortalBlock.aspx?BlockID=123&f1_v=Зеленый&f2_v=377315",
             "yellowLink": "\/SinglePortalBlock.aspx?BlockID=123&f1_v=Желтый&f2_v=377315",
             "redLink": "\/SinglePortalBlock.aspx?BlockID=123&f1_v=Красный&f2_v=377315",
-            "allTasksLink": "\/SinglePortalBlock.aspx?BlockID=123&f1_v=&f2_v=377315"
+            "allTasksLink": "\/SinglePortalBlock.aspx?BlockID=123&f1_v=&f2_v=377315",
+            "hasRisk": "1",
+            "hasRiskLink": "\/SinglePortalBlock.aspx?BlockID=123&f1_v=377315"
         }],
         "acceptProject": [{
             "blockId": "6",
@@ -111,20 +113,21 @@
             "category": "",
             "state": "Паспорт утвержден",
             "acceptEnd": "22.10.2020",
-            "taskLink": "\/MainTaskForm.aspx?TaskID=377364",
+            "taskId": "377364",
             "participants": [{
                 "fullName": "Власова Ирина Николаевна",
                 "position": "Бизнес-аналитик",
                 "department": "Техническая поддержка",
-                "photoLink": "\/UserInfo.aspx?UserID=2199"
+                "userId": "2199"
             }],
-            "canEdit": "1"
+            "accepted": "1"
         }],
         "stages": [{
                 "blockId": "7",
-                "headerName": "ЭТАП: Разработка продукции",
-                "category": "Продукт",
-                "taskLink": "\/MainTaskForm.aspx?TaskID=377319",
+                "headerName": "Разработка продукции",
+                "category": "Этапы проекта",
+                "state": "Выполняется",
+                "taskId": "377319",
                 "highlight": "1",
                 "orderedTime": "31.03.2021",
                 "orderedTimeHighlight": "0",
@@ -132,13 +135,13 @@
                     "fullName": "Литвин Василий",
                     "position": "Руководитель проекта",
                     "department": "Техническая поддержка",
-                    "photoLink": "\/UserInfo.aspx?UserID=2201"
+                    "userId": "2201"
                 }],
                 "riskState": "yellow",
                 "green": "0\/2",
                 "yellow": "1",
                 "red": "0",
-                "bar": "0",
+                "bar": "10",
                 "allTasks": "3",
                 "greenLink": "\/SinglePortalBlock.aspx?BlockID=123&f1_v=Зеленый&f2_v=377315&f3_v=377319",
                 "yellowLink": "\/SinglePortalBlock.aspx?BlockID=123&f1_v=Желтый&f2_v=377315&f3_v=377319",
@@ -150,9 +153,10 @@
             },
             {
                 "blockId": "7",
-                "headerName": "ЭТАП: Постановка на производство",
-                "category": "Анализ рынка КБ",
-                "taskLink": "\/MainTaskForm.aspx?TaskID=377320",
+                "headerName": "Постановка на производство",
+                "category": "Этапы проекта",
+                "state": "Выполняется",
+                "taskId": "377320",
                 "highlight": "1",
                 "orderedTime": "30.04.2021",
                 "orderedTimeHighlight": "1",
@@ -160,13 +164,13 @@
                     "fullName": "Литвин Василий",
                     "position": "Руководитель проекта",
                     "department": "Техническая поддержка",
-                    "photoLink": "\/UserInfo.aspx?UserID=2201"
+                    "userId": "2201"
                 }],
                 "riskState": "red",
                 "green": "0\/2",
                 "yellow": "0",
                 "red": "1",
-                "bar": "0",
+                "bar": "10",
                 "allTasks": "3",
                 "greenLink": "\/SinglePortalBlock.aspx?BlockID=123&f1_v=Зеленый&f2_v=377315&f3_v=377320",
                 "yellowLink": "\/SinglePortalBlock.aspx?BlockID=123&f1_v=Желтый&f2_v=377315&f3_v=377320",
@@ -178,17 +182,18 @@
             },
             {
                 "blockId": "7",
-                "headerName": "ЭТАП: Сертификация",
-                "category": "Анализ ТРиС",
-                "taskLink": "\/MainTaskForm.aspx?TaskID=377321",
-                "highlight": "0",
+                "headerName": "Сертификация",
+                "category": "Этапы проекта",
+                "state": "Новый",
+                "taskId": "377321",
+                "highlight": "1",
                 "orderedTime": "01.06.2021",
                 "orderedTimeHighlight": "1",
                 "participants": [{
                     "fullName": "Литвин Василий",
                     "position": "Руководитель проекта",
                     "department": "Техническая поддержка",
-                    "photoLink": "\/UserInfo.aspx?UserID=2201"
+                    "userId": "2201"
                 }],
                 "riskState": "green",
                 "green": "0\/4",
