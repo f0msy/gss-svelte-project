@@ -4,7 +4,7 @@
             "headerName": "ДОРОЖНАЯ КАРТА",
             "initDate": "22.10.2020",
             "productName": "Новый продукт (НЕ ТРОГАТЬ)",
-            "duration": 3
+            "duration": 4
         }],
         "product": [{
             "blockId": "1",
@@ -28,7 +28,7 @@
             "category": "Анализ рынка КБ",
             "state": "Подведение итогов согласования",
             "highlight": "1",
-            "duration": 6,
+            "duration": 7,
             "participants": [{
                 "fullName": "Михайловская Юлия Вадимовна",
                 "position": "Бизнес-аналитик",
@@ -124,7 +124,7 @@
         }],
         "stages": [{
                 "blockId": "7",
-                "headerName": "Разработка продукции",
+                "headerName": "ЭТАП: Разработка продукции",
                 "category": "Этапы проекта",
                 "state": "Выполняется",
                 "taskId": "377319",
@@ -141,7 +141,7 @@
                 "green": "0\/2",
                 "yellow": "1",
                 "red": "0",
-                "bar": "10",
+                "bar": "0",
                 "allTasks": "3",
                 "greenLink": "\/SinglePortalBlock.aspx?BlockID=123&f1_v=Зеленый&f2_v=377315&f3_v=377319",
                 "yellowLink": "\/SinglePortalBlock.aspx?BlockID=123&f1_v=Желтый&f2_v=377315&f3_v=377319",
@@ -153,7 +153,7 @@
             },
             {
                 "blockId": "7",
-                "headerName": "Постановка на производство",
+                "headerName": "ЭТАП: Постановка на производство",
                 "category": "Этапы проекта",
                 "state": "Выполняется",
                 "taskId": "377320",
@@ -170,7 +170,7 @@
                 "green": "0\/2",
                 "yellow": "0",
                 "red": "1",
-                "bar": "10",
+                "bar": "0",
                 "allTasks": "3",
                 "greenLink": "\/SinglePortalBlock.aspx?BlockID=123&f1_v=Зеленый&f2_v=377315&f3_v=377320",
                 "yellowLink": "\/SinglePortalBlock.aspx?BlockID=123&f1_v=Желтый&f2_v=377315&f3_v=377320",
@@ -182,11 +182,11 @@
             },
             {
                 "blockId": "7",
-                "headerName": "Сертификация",
+                "headerName": "ЭТАП: Сертификация",
                 "category": "Этапы проекта",
                 "state": "Новый",
                 "taskId": "377321",
-                "highlight": "1",
+                "highlight": "0",
                 "orderedTime": "01.06.2021",
                 "orderedTimeHighlight": "1",
                 "participants": [{
@@ -209,6 +209,22 @@
                 "hasRisk": "0",
                 "hasRiskLink": "\/SinglePortalBlock.aspx?BlockID=123&f1_v=377321"
             }
-        ]
+        ],
+        "promotion": [{
+            "taskId": "377772",
+            "category": "Продвижение",
+            "duration": 0,
+            "headerName": "ПРОДВИЖЕНИЕ",
+            "state": "В работе",
+            "participants": [{
+                "fullName": "Власова Ирина Николаевна",
+                "position": "Бизнес-аналитик",
+                "department": "Техническая поддержка",
+                "userId": "2199"
+            }]
+        }],
+        "realization": [{
+            "headerName": "РЕАЛИЗАЦИЯ"
+        }]
     }
 }

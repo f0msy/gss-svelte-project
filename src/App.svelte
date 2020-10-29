@@ -2,7 +2,6 @@
 <script charset="utf-8">
 	import ComplicatedBigComponent from "./ComplicatedBigComponent.svelte"
 	import ComplicatedSmallComponent from "./ComplicatedSmallComponent.svelte"
-	import FlexibleComponent from "./FlexibleComponent.svelte"
 	import HeaderComponent from "./HeaderComponent.svelte"
 	import SimpleBigComponent from "./SimpleBigComponent.svelte"
 	import SimpleSmallComponent from "./SimpleSmallComponent.svelte"
@@ -41,6 +40,10 @@
 			{#each mainData.data.stages as item}
 				<ComplicatedSmallComponent data={item} />
 			{/each}
+			</div>
+			<div class="small-container-2col">
+				<SimpleSmallComponent data={mainData.data.promotion[0]} />
+				<SimpleSmallComponent data={mainData.data.realization[0]} />
 			</div>
 		{:catch error}
      		<p style="color: red">{error.message}</p>
@@ -101,6 +104,11 @@
 	:global(#roadMap-app .small-container) {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
+    	grid-gap: 0.5vw;
+	}
+	:global(#roadMap-app .small-container-2col) {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
     	grid-gap: 0.5vw;
 	}
 	
@@ -281,6 +289,11 @@
 	}
 	 :global(#roadMap-app .back-green) {
 		background-color: #d2ead4;
+	}
+	 :global(#roadMap-app .headers-red) {
+		font-weight: 700;
+    	color: #ff6f73;
+		font-size: 25px;
 	}
 
 </style>

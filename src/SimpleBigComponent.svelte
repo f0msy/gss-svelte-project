@@ -6,7 +6,9 @@
 
 </script>
 
-<div class="simple-small-block">
+<div class="simple-small-block"
+    class:back-green={data.highlight=="1"}>
+    {#if data.taskId}
     <span 
         class="icons-size accepted-big"
         class:gray-icon={data.accepted == "0"}
@@ -20,4 +22,8 @@
         <OpenTaskComponent link={"/MainTaskForm.aspx?TaskID="+ data.taskLink} />
         <ParticipantsComponent data={data.participants} />
     </div>
+    {:else}
+        <span class="headers paddings">{data.headerName}</span>
+        <span class="headers-red paddings">Не создано</span>
+    {/if}
 </div>

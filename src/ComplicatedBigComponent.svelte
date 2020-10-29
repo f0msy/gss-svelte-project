@@ -9,7 +9,9 @@
     }
 </script>
 
-<div class="complicated-container">
+<div class="complicated-container"
+    class:back-green={data.highlight=="1"}>
+    {#if data.taskId}
     <div class="info-block">
         <div class="left-icons">
             <span 
@@ -77,4 +79,8 @@
         </div>
     </div>
     </div>
+    {:else}
+        <span class="headers paddings">{data.headerName}</span>
+        <span class="headers-red paddings">Не создано</span>
+    {/if}
 </div>
