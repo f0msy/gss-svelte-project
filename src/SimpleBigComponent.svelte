@@ -3,24 +3,37 @@
 
     import OpenTaskComponent from "./OpenTaskComponent.svelte"
     import ParticipantsComponent from "./ParticipantsComponent.svelte"
-
+    let signaturesList = '/component/SignaturesJournal.aspx?TaskID=' + data.taskId
+    //     let radopen = (a) => {
+    //     console.log(a);
+    // }
+    const openTask = (link) => {
+       radopen(link);
+    }
 </script>
 
 <div class="simple-small-block"
-    class:back-green={data.highlight=="1"}>
+    class:triangle-active={data.highlight=="1"}
+    class:triangle-default={data.highlight=="0"}>
     {#if data.taskId}
-    <span 
-        class="icons-size accepted-big"
-        class:gray-icon={data.accepted == "0"}
-        ><i class="fa fa-pencil" aria-hidden="true"></i>
-    </span> 
     <span class="headers paddings">{data.headerName}</span>
     <span><span class="bold-text">Статус:</span> {data.state}</span>
     <span><span class="bold-text">Дата согласования:</span> {data.acceptEnd}</span>
-    <a href="/component/SignaturesJournal.aspx?TaskID={data.taskId}"><span class="bold-text">Заключение</span></a>
     <div class="icons-div">
-        <OpenTaskComponent link={"/MainTaskForm.aspx?TaskID="+ data.taskLink} />
-        <ParticipantsComponent data={data.participants} />
+        <div class="left-icons"></div>
+        <div class="center-icons">
+            <span 
+                on:click={() => {openTask(signaturesList)}}
+                class="icons-size"
+                class:gray-icon={data.accepted == "0"}
+                ><i class="fa fa-file-text-o" aria-hidden="true"></i>
+            </span> 
+            <OpenTaskComponent link={"/MainTaskForm.aspx?TaskID="+ data.taskId} />
+                {#if data.participants}
+                <ParticipantsComponent data={data.participants} />
+                {/if}
+        </div>  
+        <div class="right-icons"></div>      
     </div>
     {:else}
         <span class="headers paddings">{data.headerName}</span>

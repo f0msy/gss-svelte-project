@@ -17,6 +17,11 @@
         document.addEventListener("DOMContentLoaded", () => {
             new window.RoadMapApp({
                 target: document.body,
+                props: {
+                    cfg: {
+                        taskid: 1
+                    }
+                }
             });
         });
     </script>

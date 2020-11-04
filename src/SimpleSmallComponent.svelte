@@ -3,26 +3,40 @@
 
     import OpenTaskComponent from "./OpenTaskComponent.svelte"
     import ParticipantsComponent from "./ParticipantsComponent.svelte"
-
+    let signaturesList = '/component/SignaturesJournal.aspx?TaskID=' + data.taskId
+    //     let radopen = (a) => {
+    //     console.log(a);
+    // }
+    const openTask = (link) => {
+       radopen(link);
+    }
 </script>
 
 <div class="simple-small-block containers"
-    class:back-green={data.highlight=="1"}>
+    class:triangle-active={data.highlight=="1"}
+    class:triangle-default={data.highlight=="0"}>
     {#if data.taskId}
-        {#if data.accepted}
-        <span 
-        class="icons-size accepted-small"
-        class:gray-icon={data.accepted == "0"}
-        ><i class="fa fa-pencil" aria-hidden="true"></i>
-        </span> 
-        {/if}
         <span class="headers paddings">{data.headerName}</span>
         <span><span class="bold-text">Категория:</span> {data.category}</span>
         <span><span class="bold-text">Статус:</span> {data.state}</span>
         <span class="paddings"><span class="bold-text">Длительность:</span> {data.duration}дн</span>
         <div class="icons-div">
-            <OpenTaskComponent link={"/MainTaskForm.aspx?TaskID="+ data.taskLink} />
-            <ParticipantsComponent data={data.participants} />
+            <div class="left-icons-small"></div>
+            <div class="center-icons">
+                {#if data.accepted}
+                    <span 
+                    on:click={() => {openTask(signaturesList)}}
+                    class="icons-size"
+                    class:gray-icon={data.accepted == "0"}
+                    ><i class="fa fa-file-text-o" aria-hidden="true"></i>
+                    </span> 
+                {/if}
+                <OpenTaskComponent link={"/MainTaskForm.aspx?TaskID="+ data.taskId} />
+                {#if data.participants}
+                <ParticipantsComponent data={data.participants} />
+                {/if}
+            </div>                
+            <div class="right-icons-small"></div>
         </div>
     {:else}
     <span class="headers paddings">{data.headerName}</span>

@@ -1,5 +1,7 @@
 
 <script charset="utf-8">
+	export let cfg;
+	
 	import ComplicatedBigComponent from "./ComplicatedBigComponent.svelte"
 	import ComplicatedSmallComponent from "./ComplicatedSmallComponent.svelte"
 	import HeaderComponent from "./HeaderComponent.svelte"
@@ -9,8 +11,8 @@
 	let mainData;
 
 	const init = async () => {
-		const res = await fetch("/data-sources/data.json");
-		// const res = await fetch(`/app/v1.2/api/publications/action/get-suppliers-data?year=${cfg.year}&suppId=${cfg.suppId}&stateId=${cfg.stateId}&suppType=${cfg.suppType}&canSave=${cfg.canSave}`);
+		// const res = await fetch("/data-sources/data.json");
+		const res = await fetch(`/app/v1.2/api/publications/action/get-roadmap-data?taskid=${cfg.taskid}`);
 		mainData = await res.json();
 
 		return mainData;
@@ -82,11 +84,20 @@
     	color: #0090ff;
     	font-size: 30px;
 	}
+
 	:global(#roadMap-app .headers) {
 		font-weight: 700;
     	color: #0090ff;
-    	font-size: 25px;
+		font-size: 25px;
+		margin-top: 20px;
 	}	
+
+	:global(#roadMap-app .headers a) {
+		font-weight: 700;
+    	color: #0090ff;
+		font-size: 25px;
+	}	
+
 	:global(#roadMap-app .bold-text) {
 		font-weight: 600;
 	}
@@ -98,18 +109,19 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		margin: 5px 0px 15px 0px;
-		padding: 10px 15px 15px 15px;
+		position: relative;
+		/* padding: 10px 15px 15px 15px; */
 	}
 	:global(#roadMap-app .small-container) {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
-    	grid-gap: 0.5vw;
+		grid-gap: 0.3vw;
+		
 	}
 	:global(#roadMap-app .small-container-2col) {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-    	grid-gap: 0.5vw;
+		grid-gap: 0.3vw;
 	}
 	
 	:global(#roadMap-app .icons-size) {
@@ -121,8 +133,10 @@
 		display: none;
 	}
 	:global(#roadMap-app .icons-div) {
-		display: flex;
-		flex-direction: row;
+		display: grid;
+    	grid-template-columns: 1fr 1fr 1fr;
+		width: 100%;
+		margin: 15px 0;
 	}
 	:global(#roadMap-app .accepted-small) {
 		width: 85%;
@@ -145,29 +159,33 @@
 	}
 	:global(#roadMap-app .left-icons) {
 		display: flex;
-		margin: 0 0 0 5%;
+		margin: 0 0 0 7%;
 		width: 75%;
 	}
 	:global(#roadMap-app .left-icons-small) {
 		display: flex;
-		margin: 0 0 0 5%;
+		margin: 0 0 0 20%;
 		width: 20%;
 	}
 	:global(#roadMap-app .center-bar) {
-		padding: 0px 35px 0 0px;
+		width: 100%;
+		top: 0px;
+    	position: absolute;
+	}
+	:global(#roadMap-app .center-icons) {
+		display: flex;
     	width: 100%;
+		justify-content: center;
 	}
 	:global(#roadMap-app .center-bar-small) {
 		padding: 0px 10px 0 0px;
 		width: 50%;
 	}
 	:global(#roadMap-app .mnp-rating-item) {
-		font-weight: 600;
 		display: flex;
 		align-items: center;
-		padding: 5px 0;
-		margin-top: 10px;
-		color: black;
+		/* padding: 5px 0; */
+		height: 10px;
 		position: relative;
 		/* text-shadow: 1px 1px 1px #000, 0 0 1px #000; */
 	}
@@ -185,26 +203,22 @@
 		width: 100%;
 		z-index: 1;
 		height: 100%;
-		background: rgb(0 0 0 / .1);
-		border: 1px solid white;
-    	border-radius: 5px;
+		background: rgb(0 162 255 / 0.2);
 	}
 	:global(#roadMap-app .mnp-rating-progress-bar) {
 		height: 100%;
-		background: rgb(120, 190, 120);
-		border-left: 1px solid rgb(120, 190, 120);
-    	border-radius: 5px;
+		background: #0090ff;
 	}	
 	:global(#roadMap-app .right-icons) {
 		display: flex;
 		justify-content: flex-end;
-		margin: 10px 20% 0 0;
+		margin: 10px 7% 0 0;
 	}
 	:global(#roadMap-app .right-icons-small) {
 		display: flex;
 		justify-content: flex-end;
 		margin: 10px 5% 0 0;
-		width: 30%;
+		width: 80%;
 	}
 	:global(#roadMap-app .green-tasks) {
 		cursor: pointer;
@@ -279,7 +293,8 @@
 	:global(#roadMap-app .complicated-container) {
 		display: grid;
 		grid-template-columns: 1fr;
-		margin: 5px;
+		position: relative;
+		/* margin: 5px; */
 	}
 	 :global(#roadMap-app .align-content) {
 		display: flex;
@@ -295,5 +310,26 @@
     	color: #ff6f73;
 		font-size: 25px;
 	}
-
+	:global(#roadMap-app .triangle-active:after) {
+		content: '';
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 30px 30px 0 0;
+		border-color: transparent rgb(120, 190, 120) transparent transparent;
+		right: 0;
+		bottom: 0;
+		position: absolute;
+	}
+		:global(#roadMap-app .triangle-default:after) {
+		content: '';
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 30px 30px 0 0;
+		border-color: transparent rgb(155, 155, 155) transparent transparent;
+		right: 0;
+		bottom: 0;
+		position: absolute;
+	}
 </style>

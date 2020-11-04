@@ -68,6 +68,7 @@
             "state": "Инициатива утверждена",
             "acceptEnd": "22.10.2020",
             "taskId": "377316",
+            "highlight": "1",
             "participants": [{
                 "fullName": "Власова Ирина Николаевна",
                 "position": "Бизнес-аналитик",
@@ -98,7 +99,7 @@
             "green": "0\/8",
             "yellow": "1",
             "red": "1",
-            "bar": "0",
+            "bar": "20",
             "allTasks": "10",
             "greenLink": "\/SinglePortalBlock.aspx?BlockID=123&f1_v=Зеленый&f2_v=377315",
             "yellowLink": "\/SinglePortalBlock.aspx?BlockID=123&f1_v=Желтый&f2_v=377315",
@@ -114,6 +115,7 @@
             "state": "Паспорт утвержден",
             "acceptEnd": "22.10.2020",
             "taskId": "377364",
+            "highlight": "1",
             "participants": [{
                 "fullName": "Власова Ирина Николаевна",
                 "position": "Бизнес-аналитик",
