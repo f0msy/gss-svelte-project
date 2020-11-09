@@ -81,20 +81,20 @@
 	}
 	:global(#roadMap-app .main-header) {
 		font-weight: 700;
-    	color: #0090ff;
+    	color: #1565c0;
     	font-size: 30px;
 	}
 
 	:global(#roadMap-app .headers) {
 		font-weight: 700;
-    	color: #0090ff;
+    	color: #1565c0;
 		font-size: 25px;
 		margin-top: 20px;
 	}	
 
 	:global(#roadMap-app .headers a) {
 		font-weight: 700;
-    	color: #0090ff;
+    	color: #1565c0;
 		font-size: 25px;
 	}	
 
@@ -207,7 +207,7 @@
 	}
 	:global(#roadMap-app .mnp-rating-progress-bar) {
 		height: 100%;
-		background: #0090ff;
+		background: #1565c0;
 	}	
 	:global(#roadMap-app .right-icons) {
 		display: flex;

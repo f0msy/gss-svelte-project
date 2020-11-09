@@ -10,6 +10,7 @@
     const openTask = (link) => {
        radopen(link);
     }
+    let hierarchyLink = '/taskhierarchies/TaskHierarchy.aspx?id=1&RootTaskId='+ data.taskId
 </script>
 
 <div class="complicated-container"
@@ -75,7 +76,7 @@
                 {#if data.participants}
                 <ParticipantsComponent data={data.participants} />
                 {/if}
-                <div on:click={() => {openTask(data.taskId)}} class="icons-size">
+                <div on:click={() => {openTask(hierarchyLink)}} class="icons-size">
                     <i class="fa fa-sitemap" aria-hidden="true"></i>
                 </div>
             </div>
