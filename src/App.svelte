@@ -17,7 +17,6 @@
 
 		return mainData;
 	  };
-	
 
   	let initPromise = init();
 </script>
@@ -54,6 +53,9 @@
 </body>
 
 <style>
+	body {
+		background-color: #f2f2f2;
+	}
 	:global(#roadMap-app) {
 		display: grid;
 		grid-template-columns: 1fr;	
@@ -110,13 +112,18 @@
 		flex-direction: column;
 		align-items: center;
 		position: relative;
+		padding: 5px;
+		flex: 1 1 auto;
+		min-width: 31%;
 		/* padding: 10px 15px 15px 15px; */
 	}
 	:global(#roadMap-app .small-container) {
-		display: grid;
-		grid-template-columns: 1fr 1fr 1fr;
-		grid-gap: 0.3vw;
-		
+		/* display: grid;
+		grid-template-columns: repeat(auto-fill, 33.04%);
+		grid-gap: 0.3vw; */
+		display: flex;
+    	flex-flow: row wrap;
+		align-content: flex-start;
 	}
 	:global(#roadMap-app .small-container-2col) {
 		display: grid;
@@ -164,7 +171,7 @@
 	}
 	:global(#roadMap-app .left-icons-small) {
 		display: flex;
-		margin: 0 0 0 20%;
+		margin: 0 0 0 20px;
 		width: 20%;
 	}
 	:global(#roadMap-app .center-bar) {
@@ -217,8 +224,8 @@
 	:global(#roadMap-app .right-icons-small) {
 		display: flex;
 		justify-content: flex-end;
-		margin: 10px 5% 0 0;
-		width: 80%;
+		margin: 10px 25px 0 0;
+		/* width: 80%; */
 	}
 	:global(#roadMap-app .green-tasks) {
 		cursor: pointer;
@@ -265,7 +272,8 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		margin-right: 3px;		
+		margin-right: 3px;
+		max-width: 50px;		
 	}
 	:global(#roadMap-app .yellow-tasks-small) {
 		cursor: pointer;
@@ -278,6 +286,7 @@
 		align-items: center;
 		justify-content: center;
 		margin-right: 3px;
+		max-width: 26px;
 	}
 	:global(#roadMap-app .red-tasks-small) {
 		cursor: pointer;
@@ -289,6 +298,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		max-width: 26px;
 	}
 	:global(#roadMap-app .complicated-container) {
 		display: grid;
