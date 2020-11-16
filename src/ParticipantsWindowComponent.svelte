@@ -38,7 +38,7 @@
     .user-cards {
         margin: 23px;
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: minmax(min-content, 1fr) minmax(min-content, 1fr);
         grid-gap: 1vw;
     }
     
@@ -51,6 +51,7 @@
         padding: 2px 10px;
         margin-top: 5px;
         box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+        min-width: 350px;
     }
 
     .mnp-list-logo {
@@ -103,7 +104,9 @@
     margin: 15% auto;
     padding: 3px;
     border: 1px solid #888;
-    width: 50%; 
+    width: min-content;
+    min-width: 300px;
+    max-width: 50%;
     }
 
     .close {

@@ -28,12 +28,12 @@
     <div >
         <div class="simple-small-block">
             <span><span class="bold-text">Статус: </span>{data.state}</span>
-            <span><span class="bold-text">Руководитель проекта: </span>{data.projectManager}</span>
-            <span><span class="bold-text">Плановый срок: </span>{data.plannedOrderedTime}</span>
+            <span><span class="bold-text">Руководитель проекта: </span>{data.projectManager ? data.projectManager : ''}</span>
+            <span><span class="bold-text">Плановый срок: </span>{data.plannedOrderedTime ? data.plannedOrderedTime : ''}</span>
         </div>
         <div class="simple-small-block">
-            <span><span class="bold-text">Дата начала: </span>{data.startDate}</span>
-            <span><span class="bold-text">Дата окончания: </span>{data.endDate}</span>
+            <span><span class="bold-text">Дата начала: </span>{data.startDate ? data.startDate : ''}</span>
+            <span><span class="bold-text">Дата окончания: </span>{data.endDate ? data.endDate : ''}</span>
         </div>
     </div>
     <div class="align-content">

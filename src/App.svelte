@@ -114,7 +114,7 @@
 		position: relative;
 		padding: 5px;
 		flex: 1 1 auto;
-		min-width: 31%;
+		min-width: 49%;
 		/* padding: 10px 15px 15px 15px; */
 	}
 	:global(#roadMap-app .small-container) {

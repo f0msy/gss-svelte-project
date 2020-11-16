@@ -18,7 +18,7 @@
     {#if data.taskId}
     <span class="headers paddings">{data.headerName}</span>
     <span><span class="bold-text">Статус:</span> {data.state}</span>
-    <span><span class="bold-text">Дата согласования:</span> {data.acceptEnd}</span>
+    <span><span class="bold-text">Дата согласования:</span> {data.acceptEnd ? data.acceptEnd : ''}</span>
     <div class="icons-div">
         <div class="left-icons"></div>
         <div class="center-icons">
